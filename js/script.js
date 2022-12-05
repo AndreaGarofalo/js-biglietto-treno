@@ -25,3 +25,9 @@ const price = document.getElementById("target");
 
 // 2- creo una costante con il prezzo al chilometro
 const priceForKm = 0.21;
+
+// 3- chiedo all'utente il numero di chilometri che vuole percorrere e lo salvo nella costante kilometer
+const kilometer = parseInt(
+  prompt("Quanti chilometri devi percorrere?", 150).trim()
+);
+console.log(kilometer);
