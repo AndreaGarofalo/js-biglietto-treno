@@ -30,8 +30,11 @@ const priceForKm = 0.21;
 const kilometer = parseInt(
   prompt("Quanti chilometri devi percorrere?", 150).trim()
 );
-// console.log(kilometer);
 
 // 4- chiedo all'utente l'età del passeggero e l1 salvo nella costante age
 const age = parseInt(prompt("Quanti anni hai?", 34).trim());
-console.log(age);
+console.log(kilometer, age);
+
+// 5- creo una formula per calcolare il prezzo del biglietto integrale
+const yourPrice = kilometer * priceForKm;
+console.log(yourPrice);
