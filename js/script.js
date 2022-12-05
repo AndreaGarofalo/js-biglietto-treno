@@ -21,4 +21,7 @@ console.log("JS OK");
 // 1- prendo l'elemento dal dom
 
 const price = document.getElementById("target");
-console.log(price);
+// console.log(price);
+
+// 2- creo una costante con il prezzo al chilometro
+const priceForKm = 0.21;
