@@ -33,11 +33,11 @@ const kilometer = parseInt(
 
 // 4- chiedo all'utente l'età del passeggero e l1 salvo nella costante age
 const age = parseInt(prompt("Quanti anni hai?", 34).trim());
-console.log(kilometer, age);
+// console.log(kilometer, age);
 
 // 5- creo una formula per calcolare il prezzo del biglietto integrale
 const yourPrice = kilometer * priceForKm;
-console.log(yourPrice);
+// console.log(yourPrice);
 
 // 6- creo due formule if per applicare gli sconti in base all'età
 let discount = "You have no discount available!";
@@ -52,4 +52,7 @@ if (age >= 65) {
   discount = `You have a 40% discount. Your total is: ${reducedPrice}€`;
 }
 
-console.log(discount);
+// console.log(discount);
+
+// 7- metto il prezzo del biglietto in pagina
+price.innerText = `The ticket price is ${yourPrice}€. ${discount}`;
