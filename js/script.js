@@ -35,24 +35,29 @@ const kilometer = parseInt(
 const age = parseInt(prompt("Quanti anni hai?", 34).trim());
 // console.log(kilometer, age);
 
-// 5- creo una formula per calcolare il prezzo del biglietto integrale
-const yourPrice = kilometer * priceForKm;
-// console.log(yourPrice);
+// 4.5 Validation
+if (isNaN(kilometer) || isNaN(age) || kilometer <= 0 || age <= 0) {
+  alert("I dati inseriti non sono corretti");
+} else {
+  // 5- creo una formula per calcolare il prezzo del biglietto integrale
+  const yourPrice = kilometer * priceForKm;
+  // console.log(yourPrice);
 
-// 6- creo due formule if per applicare gli sconti in base all'età
-let discount = "You have no discount available!";
+  // 6- creo due formule if per applicare gli sconti in base all'età
+  let discount = "You have no discount available!";
 
-if (age < 18) {
-  const reducedPrice = (yourPrice - yourPrice * 0.2).toFixed(2);
-  discount = `You have a 20% discount. Your total is: ${reducedPrice}€`;
+  if (age < 18) {
+    const reducedPrice = (yourPrice - yourPrice * 0.2).toFixed(2);
+    discount = `You have a 20% discount. Your total is: ${reducedPrice}€`;
+  }
+
+  if (age >= 65) {
+    const reducedPrice = (yourPrice - yourPrice * 0.4).toFixed(2);
+    discount = `You have a 40% discount. Your total is: ${reducedPrice}€`;
+  }
+
+  // console.log(discount);
+
+  // 7- metto il prezzo del biglietto in pagina
+  price.innerText = `The ticket price is ${yourPrice}€. ${discount}`;
 }
-
-if (age >= 65) {
-  const reducedPrice = (yourPrice - yourPrice * 0.4).toFixed(2);
-  discount = `You have a 40% discount. Your total is: ${reducedPrice}€`;
-}
-
-// console.log(discount);
-
-// 7- metto il prezzo del biglietto in pagina
-price.innerText = `The ticket price is ${yourPrice}€. ${discount}`;
